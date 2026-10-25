@@ -1,0 +1,37 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "OBJECTID": 1,
+        "label": "synthetic-alpha",
+        "status": "active"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0,
+          38.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "OBJECTID": 2,
+        "label": null,
+        "status": "retired"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.0,
+          20.0
+        ]
+      }
+    }
+  ]
+}

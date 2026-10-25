@@ -1,0 +1,25 @@
+{
+  "name": "synthetic_local_points",
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 4326
+  },
+  "objectIdField": "OBJECTID",
+  "fields": [
+    {
+      "name": "OBJECTID",
+      "type": "esriFieldTypeOID",
+      "nullable": false
+    },
+    {
+      "name": "label",
+      "type": "esriFieldTypeString",
+      "nullable": true
+    },
+    {
+      "name": "status",
+      "type": "esriFieldTypeString",
+      "nullable": false
+    }
+  ]
+}

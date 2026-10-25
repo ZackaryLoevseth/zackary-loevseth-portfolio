@@ -1,0 +1,46 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 4326
+  },
+  "fields": [
+    {
+      "name": "OBJECTID",
+      "type": "esriFieldTypeOID"
+    },
+    {
+      "name": "label",
+      "type": "esriFieldTypeString"
+    },
+    {
+      "name": "status",
+      "type": "esriFieldTypeString"
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "OBJECTID": 1,
+        "label": "synthetic-alpha",
+        "status": "active"
+      },
+      "geometry": {
+        "x": -77.0,
+        "y": 38.0
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 2,
+        "label": null,
+        "status": "retired"
+      },
+      "geometry": {
+        "x": 10.0,
+        "y": 20.0
+      }
+    }
+  ],
+  "exceededTransferLimit": false
+}
