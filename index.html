@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Zackary Loevseth’s portfolio: applied AI evaluation, software security, and geospatial and environmental analysis through reproducible tools and traceable evidence."
+      content="Zackary Loevseth: merged NCO and xarray contributions, Wordfence and Paddle security recognition, and practical tools for geospatial and climate data."
     />
     <meta name="theme-color" content="#f2f0e9" />
     <title>Zackary Loevseth — Professional Portfolio</title>
@@ -24,8 +24,9 @@
         </a>
 
         <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#contributions">Results</a>
+          <a href="#tools">Tools</a>
           <a href="#experience">Experience</a>
-          <a href="#work">Work</a>
           <a href="#background">Education</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -37,20 +38,15 @@
         <div class="shell hero-grid">
           <div class="hero-copy" data-reveal>
             <p class="eyebrow">AI evaluation · Software security · Geospatial analysis</p>
-            <h1 id="hero-title">Technical judgment,<br /><em>made useful.</em></h1>
+            <h1 id="hero-title">Open source.<br /><em>Security. Data.</em></h1>
             <p class="hero-intro">
-              I build tools for AI evaluation, investigate software security,
-              and analyze geospatial and environmental data. My work spans source
-              provenance and correction-aware testing, raster analysis, and rainfall
-              patterns. I turn complex technical questions into reproducible workflows
-              with evidence that can be inspected and challenged.
-            </p>
-            <p class="scope-note">
-              Discovered stored cross-site scripting in Appointment Hour Booking
-              (<a href="https://www.cve.org/CVERecord?id=CVE-2026-96573" target="_blank" rel="noopener noreferrer">CVE-2026-96573</a>).
+              My open-source contributions have been merged into NCO and xarray,
+              and my security research has been recognized by Wordfence and Paddle.
+              I work across AI evaluation, software security, and geospatial and
+              climate data.
             </p>
             <div class="hero-actions" aria-label="Primary actions">
-              <a class="button button-primary" href="#experience">See experience</a>
+              <a class="button button-primary" href="#contributions">See selected results</a>
               <a
                 class="button button-text"
                 href="https://www.linkedin.com/in/zackaryloevseth/"
@@ -76,6 +72,268 @@
           <p><span>01</span> Build reproducible AI evaluations</p>
           <p><span>02</span> Investigate software security</p>
           <p><span>03</span> Analyze geospatial and climate data</p>
+        </div>
+      </section>
+
+      <section class="section work-section" id="contributions" aria-labelledby="work-title">
+        <div class="shell">
+          <div class="section-heading" data-reveal>
+            <div>
+              <p class="eyebrow">Open source &amp; security</p>
+              <h2 id="work-title">Selected Results</h2>
+            </div>
+            <p>Merged contributions, public security recognition and documented fixes, linked to the upstream records.</p>
+          </div>
+
+          <div class="practice-list">
+          <article class="practice-item" id="nco-contribution" data-reveal>
+            <span class="practice-number" aria-hidden="true">01</span>
+            <div>
+              <p class="project-kicker"><span class="status status-merged">Merged upstream · Accepted in Debian packaging</span></p>
+              <h3>NCO · Reproducible builds</h3>
+              <p>My reproducible-build fix was merged into NCO and accepted into Debian packaging. It removes build-user and host variation when <code>SOURCE_DATE_EPOCH</code> is set and nonempty.</p>
+              <details class="project-notes">
+                <summary>Scope of the fix</summary>
+                <div class="notes-body">
+                  <p>The configure change records stable fallback values for build-user and host metadata. Builds with <code>SOURCE_DATE_EPOCH</code> unset or empty retain their existing behavior. The Debian link records packaging acceptance.</p>
+                </div>
+              </details>
+              <div class="card-links">
+                <a href="https://github.com/nco/nco/pull/324" target="_blank" rel="noopener noreferrer">Merged PR #324 <span aria-hidden="true">↗</span></a>
+                <a href="https://salsa.debian.org/debian-gis-team/nco/-/commit/42302b1d47ff7664d4ecf1baa992c858ce236de2" target="_blank" rel="noopener noreferrer">Debian packaging commit <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="practice-item" id="xarray-contribution" data-reveal>
+            <span class="practice-number" aria-hidden="true">02</span>
+            <div>
+              <p class="project-kicker"><span class="status status-merged">Merged</span></p>
+              <h3>xarray · Scientific Python documentation</h3>
+              <p>Added a concrete <code>Dataset.reindex_like</code> example showing coordinate-label alignment and how missing labels become NaN.</p>
+
+              <div class="card-links">
+                <a href="https://github.com/pydata/xarray/pull/11792" target="_blank" rel="noopener noreferrer">Merged PR #11792 <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="practice-item" id="appointment-hour-booking" data-reveal>
+            <span class="practice-number" aria-hidden="true">03</span>
+            <div>
+              <p class="project-kicker"><span class="status status-published">Published advisory · High 7.2</span></p>
+              <h3>Appointment Hour Booking · CVE-2026-96573</h3>
+              <p>Named researcher in Wordfence’s advisory for stored DOM-based cross-site scripting in Appointment Hour Booking.</p>
+              <details class="project-notes">
+                <summary>Affected scope</summary>
+                <div class="notes-body">
+                  <p>The finding affects versions through 1.5.97 under a non-default configuration. The advisory identifies 1.5.98 as the patched version.</p>
+                </div>
+              </details>
+              <div class="card-links">
+                <a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/3044e60f-b930-42db-ba5d-656e71b84226" target="_blank" rel="noopener noreferrer">Wordfence advisory <span aria-hidden="true">↗</span></a>
+                <a href="https://www.cve.org/CVERecord?id=CVE-2026-96573" target="_blank" rel="noopener noreferrer">CVE record <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="practice-item" id="paddle-security" data-reveal>
+            <span class="practice-number" aria-hidden="true">04</span>
+            <div>
+              <p class="project-kicker">Public vendor acknowledgment · October 2026</p>
+              <h3>Paddle Security Hall of Fame</h3>
+              <p>Recognized for “Sensitive Information in Log Files” in Paddle’s Security Hall of Fame.</p>
+              <div class="card-links">
+                <a href="https://www.paddle.com/security/acknowledgments" target="_blank" rel="noopener noreferrer">Official acknowledgment <span aria-hidden="true">↗</span></a>
+              </div>
+              <details class="project-notes">
+                <summary>Public SDK release notes</summary>
+                <div class="notes-body">
+                  <p>Separately, Paddle’s GitHub release for Python SDK v1.16.1 (26 October 2026) lists SEC-602: “Stop logging webhook signatures and reject future timestamps.”</p>
+                  <div class="card-links">
+                    <a href="https://github.com/PaddleHQ/paddle-python-sdk/releases/tag/v1.16.1" target="_blank" rel="noopener noreferrer">GitHub release v1.16.1 <span aria-hidden="true">↗</span></a>
+                    <a href="https://github.com/PaddleHQ/paddle-python-sdk/pull/169" target="_blank" rel="noopener noreferrer">Public fix · PR #169 <span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </article>
+
+          <article class="practice-item" id="keeperhub-contribution" data-reveal>
+            <span class="practice-number" aria-hidden="true">05</span>
+            <div>
+              <p class="project-kicker"><span class="status status-merged">Released in v3.2.0</span> · KeeperHub · PR #2340</p>
+              <h3>Generation-stream failure handling</h3>
+              <p class="project-summary">
+                I contributed to generation-stream error handling and cleanup
+                included in KeeperHub v3.2.0.
+              </p>
+              <p class="scope-note">
+                Built on Yoh5’s original diagnosis and accepted plan.
+              </p>
+              <details class="project-notes">
+                <summary>Contribution notes</summary>
+                <div class="notes-body">
+                  <p>
+                    The patch separated JSON parsing from deliberate stream errors,
+                    canceled still-open readers on early failure, preserved the
+                    original error if cleanup failed, and added mocked-stream tests.
+                  </p>
+                </div>
+              </details>
+              <div class="card-links">
+                <a href="https://github.com/KeeperHub/keeperhub/releases/tag/v3.2.0" target="_blank" rel="noopener noreferrer">Release v3.2.0 <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/KeeperHub/keeperhub/pull/2340" target="_blank" rel="noopener noreferrer">Pull request <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/KeeperHub/keeperhub/issues/2333" target="_blank" rel="noopener noreferrer">Original issue <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="practice-item" id="libtiff-contribution" data-reveal>
+            <span class="practice-number" aria-hidden="true">06</span>
+            <div>
+              <p class="project-kicker">LibTIFF · Approach adapted &amp; credited · MR !946</p>
+              <h3>Directory-tracking memory accounting</h3>
+              <p class="project-summary">
+                I contributed a patch routing directory-tracking allocations through
+                TIFF handle-aware allocators, together with a dedicated unit test.
+              </p>
+              <p class="scope-note">
+                Maintainer Su Laus adapted the approach in MR !992 and credited Zack.
+              </p>
+              <details class="project-notes">
+                <summary>Contribution notes</summary>
+                <div class="notes-body">
+                  <p>
+                    The <code>test_open_options</code> tests in the maintainer’s
+                    MR !992 came from the separate test contribution in MR !975.
+                  </p>
+                </div>
+              </details>
+              <div class="card-links">
+                <a href="https://gitlab.com/libtiff/libtiff/-/merge_requests/946" target="_blank" rel="noopener noreferrer">MR !946 <span aria-hidden="true">↗</span></a>
+                <a href="https://gitlab.com/libtiff/libtiff/-/merge_requests/992" target="_blank" rel="noopener noreferrer">Maintainer MR !992 <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="practice-item" id="inngest-diagnosis" data-reveal>
+            <span class="practice-number" aria-hidden="true">07</span>
+            <div>
+              <p class="project-kicker"><span class="status status-open">Diagnosis &amp; proposed fix</span></p>
+              <h3>Inngest · Registration error reporting</h3>
+              <p>Diagnosed an error path that reported failed registrations as successful and proposed returning the error response.</p>
+              <details class="project-notes">
+                <summary>Reproduction and proposed correction</summary>
+                <div class="notes-body">
+                  <p>The public issue documents a local mocked registration failure that returned HTTP 200. I proposed adding the missing return in the error branch, with regression cases for failed and successful registrations.</p>
+                </div>
+              </details>
+              <div class="card-links">
+                <a href="https://github.com/inngest/inngest-py/issues/397" target="_blank" rel="noopener noreferrer">Issue #397 · Diagnosis &amp; proposed fix <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section work-section" id="tools" aria-labelledby="tools-title">
+        <div class="shell">
+          <div class="section-heading" data-reveal>
+            <div>
+              <p class="eyebrow">Practical work</p>
+              <h2 id="tools-title">Tools &amp; Projects</h2>
+            </div>
+            <p>Explore precipitation data, check GIS inputs and inspect the methods behind the work.</p>
+          </div>
+          <div class="project-grid">
+          <article class="project-card" data-reveal>
+              <div class="card-topline">
+                <span class="status status-published">Interactive work sample</span>
+                <span class="card-index" aria-hidden="true">01</span>
+              </div>
+              <p class="project-kicker">NOAA GHCN-Daily · Data visualization</p>
+              <h3>Precipitation, in context</h3>
+              <p class="project-summary">
+                A reproducible NOAA precipitation explorer and data-quality work
+                sample. Charts and numerical tables expose dated totals, selected
+                reference means and explicit completeness rules.
+              </p>
+              <details class="project-notes">
+                <summary>Methods in brief</summary>
+                <div class="notes-body">
+                  <p>
+                    Changing the dates or reference changes the relative comparison
+                    by ordinary arithmetic. The app retains unavailable results
+                    and separates synthetic omissions from observed data.
+                  </p>
+                </div>
+              </details>
+              <div class="card-links">
+                <a href="work/rainfall/">Explore precipitation <span aria-hidden="true">→</span></a>
+                <a href="work/rainfall/case-study.html">Case study <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="project-card" id="gis-data-qa" data-reveal>
+              <div class="card-topline">
+                <span class="status status-published">Local synthetic fixtures</span>
+                <span class="card-index" aria-hidden="true">02</span>
+              </div>
+              <p class="project-kicker">Python · GeoJSON &amp; ArcGIS-style point data</p>
+              <h3>GIS Data QA Utility</h3>
+              <p>Built a Python tool for validating GeoJSON and ArcGIS-style point data against a defined contract, checking schema, IDs, CRS metadata, geometry, coordinate ranges and truncation flags. Includes 46 automated tests and a reproducible seven-case demo using synthetic fixtures.</p>
+              <div class="card-links">
+                <a href="https://github.com/ZackaryLoevseth/zackary-loevseth-portfolio/tree/main/work/gis-data-qa" target="_blank" rel="noopener noreferrer">Source &amp; README <span aria-hidden="true">↗</span></a>
+                <a href="work/gis-data-qa.zip" download>Download source and tests <span aria-hidden="true">↓</span></a>
+              </div>
+            </article>
+
+          <article class="project-card" data-reveal>
+              <div class="card-topline">
+                <span class="status status-published">Public evaluation package</span>
+                <span class="card-index" aria-hidden="true">03</span>
+              </div>
+              <p class="project-kicker">Vesuvius · TIFXYZ resampling</p>
+              <h3>Checking coordinate-resampling validity</h3>
+              <p class="project-summary">
+                I evaluated and corrected coordinate-resampling validity on three
+                public surface patches from one scroll, with regression tests and
+                source-data checksums.
+              </p>
+              <p class="scope-note">
+                The report covers direct API geometry checks, separate from
+                ink recognition and upstream integration.
+              </p>
+              <div class="card-links">
+                <a href="https://github.com/ZackaryLoevseth/vesuvius-tifxyz-resampling" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/ZackaryLoevseth/vesuvius-tifxyz-resampling/blob/main/REVIEW_REPORT.md" target="_blank" rel="noopener noreferrer">Technical report <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/ZackaryLoevseth/vesuvius-tifxyz-resampling/blob/main/SCOPE.md" target="_blank" rel="noopener noreferrer">Evaluation scope <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+          <article class="project-card project-card-dark" data-reveal>
+              <div class="card-topline">
+                <span class="status status-prototype">Public prototype</span>
+                <span class="card-index" aria-hidden="true">04</span>
+              </div>
+              <p class="project-kicker">EvidenceDesk · Strands + local Ollama/Qwen</p>
+              <h3>A research handoff that keeps the evidence attached</h3>
+              <p class="project-summary">
+                I designed and directed a local research workflow that captures
+                source snapshots, checks exact textual matches and exports
+                attributed review packets.
+              </p>
+              <p class="scope-note">
+                Text matching supports quotation checks; interpretation remains
+                a reviewer’s task.
+              </p>
+              <div class="card-links">
+                <a href="https://github.com/ZackaryLoevseth/evidencedesk-strands" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -225,221 +483,6 @@
               </a>
             </div>
           </details>
-        </div>
-      </section>
-
-      <section class="section work-section" id="contributions" aria-labelledby="work-title">
-        <div class="shell">
-          <div class="section-heading" data-reveal>
-            <div>
-              <p class="eyebrow">Selected public contributions</p>
-              <h2 id="work-title">Evidence before adjectives.</h2>
-            </div>
-            <p>
-              Published security research, open-source patches, and inspectable
-              analysis tools—each linked to its source.
-            </p>
-          </div>
-
-          <article class="practice-item" id="paddle-security" data-reveal>
-            <span class="practice-number" aria-hidden="true">↗</span>
-            <div>
-              <p class="project-kicker">Public vendor acknowledgment · October 2026</p>
-              <h3>Paddle Security Hall of Fame</h3>
-              <p>Recognized for “Sensitive Information in Log Files” in Paddle’s Security Hall of Fame.</p>
-              <div class="card-links">
-                <a href="https://www.paddle.com/security/acknowledgments" target="_blank" rel="noopener noreferrer">Official acknowledgment <span aria-hidden="true">↗</span></a>
-              </div>
-              <details class="project-notes">
-                <summary>Public SDK release notes</summary>
-                <div class="notes-body">
-                  <p>Separately, Paddle’s GitHub release for Python SDK v1.16.1 (26 October 2026) lists SEC-602: “Stop logging webhook signatures and reject future timestamps.”</p>
-                  <div class="card-links">
-                    <a href="https://github.com/PaddleHQ/paddle-python-sdk/releases/tag/v1.16.1" target="_blank" rel="noopener noreferrer">GitHub release v1.16.1 <span aria-hidden="true">↗</span></a>
-                    <a href="https://github.com/PaddleHQ/paddle-python-sdk/pull/169" target="_blank" rel="noopener noreferrer">Public fix · PR #169 <span aria-hidden="true">↗</span></a>
-                  </div>
-                </div>
-              </details>
-            </div>
-          </article>
-
-          <div class="project-grid">
-            <article class="project-card project-card-featured" data-reveal>
-              <div class="card-topline">
-                <span class="status status-published">Published security advisory</span>
-                <span class="card-index" aria-hidden="true">01</span>
-              </div>
-              <p class="project-kicker">Wordfence advisory · 30 September 2026</p>
-              <h3>Appointment Hour Booking stored DOM-based XSS</h3>
-              <p class="project-summary">
-                Discovered stored cross-site scripting in Appointment Hour Booking
-                (<a href="https://www.cve.org/CVERecord?id=CVE-2026-96573" target="_blank" rel="noopener noreferrer">CVE-2026-96573</a>).
-                The finding affects versions through 1.5.97 under a non-default configuration.
-              </p>
-              <div class="card-links">
-                <a
-                  href="https://www.wordfence.com/threat-intel/vulnerabilities/id/3044e60f-b930-42db-ba5d-656e71b84226"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >Wordfence advisory <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-
-            <article class="project-card" data-reveal>
-              <div class="card-topline">
-                <span class="status status-merged">Included in v3.2.0</span>
-                <span class="card-index" aria-hidden="true">02</span>
-              </div>
-              <p class="project-kicker">KeeperHub · v3.2.0 · Pull request #2340</p>
-              <h3>Generation-stream failure handling</h3>
-              <p class="project-summary">
-                I contributed to generation-stream error handling and cleanup
-                included in KeeperHub v3.2.0.
-              </p>
-              <p class="scope-note">
-                Built on Yoh5’s original diagnosis and accepted plan.
-              </p>
-              <details class="project-notes">
-                <summary>Contribution notes</summary>
-                <div class="notes-body">
-                  <p>
-                    The patch separated JSON parsing from deliberate stream errors,
-                    canceled still-open readers on early failure, preserved the
-                    original error if cleanup failed, and added mocked-stream tests.
-                  </p>
-                </div>
-              </details>
-              <div class="card-links">
-                <a href="https://github.com/KeeperHub/keeperhub/releases/tag/v3.2.0" target="_blank" rel="noopener noreferrer">Release v3.2.0 <span aria-hidden="true">↗</span></a>
-                <a href="https://github.com/KeeperHub/keeperhub/pull/2340" target="_blank" rel="noopener noreferrer">Pull request <span aria-hidden="true">↗</span></a>
-                <a href="https://github.com/KeeperHub/keeperhub/issues/2333" target="_blank" rel="noopener noreferrer">Original issue <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-
-            <article class="project-card" data-reveal>
-              <div class="card-topline">
-                <span class="status status-open">Patch contribution</span>
-                <span class="card-index" aria-hidden="true">03</span>
-              </div>
-              <p class="project-kicker">LibTIFF · Merge request !946</p>
-              <h3>Directory-tracking memory accounting</h3>
-              <p class="project-summary">
-                I contributed a patch routing directory-tracking allocations through
-                TIFF handle-aware allocators, together with a dedicated unit test.
-              </p>
-              <p class="scope-note">
-                Maintainer Su Laus adapted the approach in MR !992 and credited Zack.
-              </p>
-              <details class="project-notes">
-                <summary>Contribution notes</summary>
-                <div class="notes-body">
-                  <p>
-                    The <code>test_open_options</code> tests in the maintainer’s
-                    MR !992 came from the separate test contribution in MR !975.
-                  </p>
-                </div>
-              </details>
-              <div class="card-links">
-                <a href="https://gitlab.com/libtiff/libtiff/-/merge_requests/946" target="_blank" rel="noopener noreferrer">MR !946 <span aria-hidden="true">↗</span></a>
-                <a href="https://gitlab.com/libtiff/libtiff/-/merge_requests/992" target="_blank" rel="noopener noreferrer">Maintainer MR !992 <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-
-            <article class="project-card project-card-dark" data-reveal>
-              <div class="card-topline">
-                <span class="status status-prototype">Public prototype</span>
-                <span class="card-index" aria-hidden="true">04</span>
-              </div>
-              <p class="project-kicker">EvidenceDesk · Strands + local Ollama/Qwen</p>
-              <h3>A research handoff that keeps the evidence attached</h3>
-              <p class="project-summary">
-                I designed and directed a local research workflow that captures
-                source snapshots, checks exact textual matches and exports
-                attributed review packets.
-              </p>
-              <p class="scope-note">
-                Text matching supports quotation checks; interpretation remains
-                a reviewer’s task.
-              </p>
-              <div class="card-links">
-                <a href="https://github.com/ZackaryLoevseth/evidencedesk-strands" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-
-            <article class="project-card" data-reveal>
-              <div class="card-topline">
-                <span class="status status-published">Public evaluation package</span>
-                <span class="card-index" aria-hidden="true">05</span>
-              </div>
-              <p class="project-kicker">Vesuvius · TIFXYZ resampling</p>
-              <h3>Checking coordinate-resampling validity</h3>
-              <p class="project-summary">
-                I evaluated and corrected coordinate-resampling validity on three
-                public surface patches from one scroll, with regression tests and
-                source-data checksums.
-              </p>
-              <p class="scope-note">
-                The report covers direct API geometry checks, separate from
-                ink recognition and upstream integration.
-              </p>
-              <div class="card-links">
-                <a href="https://github.com/ZackaryLoevseth/vesuvius-tifxyz-resampling" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
-                <a href="https://github.com/ZackaryLoevseth/vesuvius-tifxyz-resampling/blob/main/REVIEW_REPORT.md" target="_blank" rel="noopener noreferrer">Technical report <span aria-hidden="true">↗</span></a>
-                <a href="https://github.com/ZackaryLoevseth/vesuvius-tifxyz-resampling/blob/main/SCOPE.md" target="_blank" rel="noopener noreferrer">Evaluation scope <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-
-            <article class="project-card" data-reveal>
-              <div class="card-topline">
-                <span class="status status-published">Interactive work sample</span>
-                <span class="card-index" aria-hidden="true">06</span>
-              </div>
-              <p class="project-kicker">NOAA GHCN-Daily · Data visualization</p>
-              <h3>Precipitation, in context</h3>
-              <p class="project-summary">
-                A reproducible NOAA precipitation explorer and data-quality work
-                sample. Charts and numerical tables expose dated totals, selected
-                reference means and explicit completeness rules.
-              </p>
-              <details class="project-notes">
-                <summary>Methods in brief</summary>
-                <div class="notes-body">
-                  <p>
-                    Changing the dates or reference changes the relative comparison
-                    by ordinary arithmetic. The app retains unavailable results
-                    and separates synthetic omissions from observed data.
-                  </p>
-                </div>
-              </details>
-              <div class="card-links">
-                <a href="work/rainfall/">Explore precipitation <span aria-hidden="true">→</span></a>
-                <a href="work/rainfall/case-study.html">Case study <span aria-hidden="true">→</span></a>
-              </div>
-            </article>
-          </div>
-
-          <article class="practice-item" data-reveal>
-            <span class="practice-number" aria-hidden="true">07</span>
-            <div>
-              <h3>xarray · Scientific Python documentation</h3>
-              <p>Submitted a concrete Dataset.reindex_like example showing coordinate-label alignment and how missing labels become NaN.</p>
-              <div class="card-links">
-                <a href="https://github.com/pydata/xarray/pull/11792" target="_blank" rel="noopener noreferrer">View pull request · <span class="status-open">Open</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="practice-item" id="gis-data-qa" data-reveal>
-            <span class="practice-number" aria-hidden="true">08</span>
-            <div>
-              <h3>GIS Data QA Utility</h3>
-              <p>Built a Python tool for validating GeoJSON and ArcGIS-style point data against a defined contract, checking schema, IDs, CRS metadata, geometry, coordinate ranges and truncation flags. Includes 46 automated tests and a reproducible seven-case demo using synthetic fixtures.</p>
-              <div class="card-links">
-                <a href="https://github.com/ZackaryLoevseth/zackary-loevseth-portfolio/tree/main/work/gis-data-qa" target="_blank" rel="noopener noreferrer">Source &amp; README <span aria-hidden="true">↗</span></a>
-                <a href="work/gis-data-qa.zip" download>Download source and tests <span aria-hidden="true">↓</span></a>
-              </div>
-            </div>
-          </article>
         </div>
       </section>
 

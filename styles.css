@@ -1692,6 +1692,7 @@ code {
 
   .site-nav {
     width: 100%;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 0.6rem;
   }
